@@ -1,5 +1,5 @@
 
-/*CASE 1: Manager wants to see a table that includes company employees information
+    /*CASE 1: Manager wants to see a table that includes company employees information
  and he wants to analyze these information to make new decisions about company’s future plans.
 
  * Manager wants to see these informations: FirstName, LastName, JobTitle, BirthDate, HireDate,
@@ -9,47 +9,35 @@
   * These information are in 11 different tables. Then, join structure should be used to connect 
   all tables each other. But, we will use inner join because we need to have common points all of them.*/
 
-  * INNER JOIN STATEMENT 
+  
+*** PREPARING RAW DATA DEMANDED BY MANAGER
 
-    SELECT column_name(s)
-    FROM table1
-    INNER JOIN table2
-    ON table1.column_name = table2.column_name;
+    SELECT pp.FirstName, pp.LastName, hre.JobTitle, hre.BirthDate, hre.HireDate, pp.PersonType, hre.MaritalStatus, hre.Gender, 
+    ppt.[Name] 'Phone Number Type Name', ppp.PhoneNumber, pea.EmailAddress, pat.[Name] 'Address Type Name', 
+    pa.AddressLine1, pa.PostalCode, pa.City, pst.[Name] 'State Province Name', sst.[Name] 'Territory Name', 
+    pcr.[Name] 'Country Name', sst.[Group] 'Continent'
 
- * INNER JOIN EXAMPLE
+    FROM HumanResources.Employee hre
 
-    SELECT hre.BusinessEntityID, pp.FirstName,pp.LastName, hre.JobTitle FROM
-    HumanResources.Employee hre 
-    INNER JOIN Person.Person pp On hre.BusinessEntityID = pp.BusinessEntityID;
+    INNER JOIN Person.Person pp ON hre.BusinessEntityID = pp.BusinessEntityID
 
-* PREPARING RAW DATA DEMANDED BY MANAGER
+    INNER JOIN Person.BusinessEntityAddress pbea ON pbea.BusinessEntityID = hre.BusinessEntityID
 
-SELECT pp.FirstName, pp.LastName, hre.JobTitle, hre.BirthDate, hre.HireDate, pp.PersonType, hre.MaritalStatus, hre.Gender, 
-ppt.[Name] 'Phone Number Type Name', ppp.PhoneNumber, pea.EmailAddress, pat.[Name] 'Address Type Name', 
-pa.AddressLine1, pa.PostalCode, pa.City, pst.[Name] 'State Province Name', sst.[Name] 'Territory Name', 
-pcr.[Name] 'Country Name', sst.[Group] 'Continent'
+    INNER JOIN Person.Address pa ON pa.AddressID = pbea.AddressID
 
-FROM HumanResources.Employee hre
+    INNER JOIN Person.AddressType pat ON pat.AddressTypeID =pbea.AddressTypeID
 
-INNER JOIN Person.Person pp ON hre.BusinessEntityID = pp.BusinessEntityID
+    INNER JOIN Person.EmailAddress pea ON pea.BusinessEntityID = hre.BusinessEntityID
 
-INNER JOIN Person.BusinessEntityAddress pbea ON pbea.BusinessEntityID = hre.BusinessEntityID
+    INNER JOIN Person.PersonPhone ppp ON ppp.BusinessEntityID = hre.BusinessEntityID
 
-INNER JOIN Person.Address pa ON pa.AddressID = pbea.AddressID
+    INNER JOIN Person.PhoneNumberType ppt ON ppt.PhoneNumberTypeID = ppp.PhoneNumberTypeID
 
-INNER JOIN Person.AddressType pat ON pat.AddressTypeID =pbea.AddressTypeID
+    INNER JOIN Person.StateProvince pst ON pst.StateProvinceID = pa.StateProvinceID
 
-INNER JOIN Person.EmailAddress pea ON pea.BusinessEntityID = hre.BusinessEntityID
+    INNER JOIN Person.CountryRegion pcr ON pcr.CountryRegionCode = pst.CountryRegionCode
 
-INNER JOIN Person.PersonPhone ppp ON ppp.BusinessEntityID = hre.BusinessEntityID
-
-INNER JOIN Person.PhoneNumberType ppt ON ppt.PhoneNumberTypeID = ppp.PhoneNumberTypeID
-
-INNER JOIN Person.StateProvince pst ON pst.StateProvinceID = pa.StateProvinceID
-
-INNER JOIN Person.CountryRegion pcr ON pcr.CountryRegionCode = pst.CountryRegionCode
-
-INNER JOIN Sales.SalesTerritory sst ON sst.TerritoryID = pst.TerritoryID;
+    INNER JOIN Sales.SalesTerritory sst ON sst.TerritoryID = pst.TerritoryID;
 
 
 ************************************************************************************
