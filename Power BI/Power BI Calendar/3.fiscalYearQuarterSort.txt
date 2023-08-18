@@ -1,0 +1,19 @@
+let
+    Quarters = {3,3,3,4,4,4,1,1,1,2,2,2},
+    Source = List.Dates,
+    #"Invoked FunctionSource" = Source(#date(Date.Year(Date.AddYears(Date.From(DateTime.LocalNow()), -2)),1,1), Duration.Days(DateTime.Date(DateTime.FixedLocalNow()) - #date(Date.Year(Date.AddYears(Date.From(DateTime.LocalNow()), -2)),1,1)), #duration(1, 0, 0, 0)),
+    #"Table from List1" = Table.FromList(#"Invoked FunctionSource", Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Renamed Columns1" = Table.RenameColumns(#"Table from List1",{{"Column1", "Date"}}),
+    #"Added Conditional Column" = Table.AddColumn(#"Renamed Columns1", "End of Quarter", each Date.EndOfQuarter([Date])),
+    #"End of Quarter" = #"Added Conditional Column"[End of Quarter],
+    #"Remove Nulls" = List.RemoveNulls(#"End of Quarter"),
+    #"Table from List2" = Table.FromList(#"Remove Nulls", Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Renamed Columns2" = Table.RenameColumns(#"Table from List2",{{"Column1", "End of Quarter"}}),
+    #"Added Custom1" = Table.AddColumn(#"Renamed Columns2", "Fiscal Year", each if Date.Month([End of Quarter])>6 then Date.Year([End of Quarter])+1 else Date.Year([End of Quarter])),
+    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "Fiscal Quarter", each Quarters{Date.Month([End of Quarter])-1}),
+    #"Added Custom3" = Table.AddColumn(#"Added Custom2", "Fiscal Year Quarter ", each Number.ToText([Fiscal Year]) & " Q" & Number.ToText([Fiscal Quarter])),
+    #"Added Custom4" = Table.AddColumn(#"Added Custom3", "Fiscal Year Quarter Sort", each Number.FromText(Number.ToText([Fiscal Year]) & "0" & Number.ToText([Fiscal Quarter]))),
+    #"Removed Duplicates" = Table.Distinct(#"Added Custom4", {"End of Quarter"}),
+    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "Index", 1, 1)
+in
+    #"Added Index"

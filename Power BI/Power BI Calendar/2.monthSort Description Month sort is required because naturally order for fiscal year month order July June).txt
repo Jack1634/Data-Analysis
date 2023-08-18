@@ -1,0 +1,5 @@
+let
+    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUfIqzalUitWJVjICchxL00uLS8BcYyA3OLWgJDU3KbUILGICFPFPLsmH8U2BfL/8MoQCM6CAS2oyQsAcZH5iXmliEcQKCyDfLTWpCC5gCRTwTSxKzgDzDA1ATigoysyBcA3BshCVhkZgt+alKsXGAgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Index = _t, Month = _t]),
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Index", Int64.Type}, {"Month", type text}})
+in
+    #"Changed Type"

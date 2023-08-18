@@ -1,0 +1,2544 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20221.22.0611.0333                               -->
+<workbook source-build='2022.1.3 (20221.22.0611.0333)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <BasicButtonObject />
+    <_.fcp.DashboardExportButton.true...DashboardExportButton />
+    <DashboardMttwImageObject />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/RWFDHospitalEmregencyroomvisits?rev=1.0' id='RWFDHospitalEmregencyroomvisits' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Hosibtals' inline='true' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='markbradbourne/rwfd-real-world-fake-data' name='webdata-direct.01seqhb0ajw8tp1fzo1se18fpgfy'>
+            <connection APIVersion='' authType='basic' authentication='yes' channel='https' class='webdata-direct' connectionData='{&quot;dataset&quot;:&quot;markbradbourne/rwfd-real-world-fake-data&quot;,&quot;query&quot;:&quot;SELECT * FROM hospital_er&quot;,&quot;queryType&quot;:&quot;sql&quot;,&quot;version&quot;:&quot;1.1.0&quot;}' connectionName='markbradbourne/rwfd-real-world-fake-data' increment-key='' path='/' port='443' scriptVersion='' secondary_whitelist='' urlQuery='code=b2639ff2-7d8a-4ef7-b548-a918b7ee7690&amp;state=926efe10-4a1c-11ec-8a27-03d3f862102d' usernameAlias='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='webdata-direct.01seqhb0ajw8tp1fzo1se18fpgfy' name='Query Results' table='[QueryTable]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='webdata-direct.01seqhb0ajw8tp1fzo1se18fpgfy' name='Query Results' table='[QueryTable]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;datetime&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_id</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_id]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_gender</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_gender]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_gender</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_age</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_age]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_sat_score</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_sat_score]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_sat_score</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_first_inital</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_first_inital]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_first_inital</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_last_name</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_last_name]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_last_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_race</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_race]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_race</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_admin_flag</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_admin_flag]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_admin_flag</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;bool&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_waittime</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[patient_waittime]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>patient_waittime</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>department_referral</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[department_referral]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>department_referral</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Measure Names' datatype='string' name='[:Measure Names]' role='dimension' type='nominal' />
+      <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([patient_id])' />
+      </column>
+      <column caption='M Patients' datatype='integer' name='[Calculation_489766500572090369]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='countd(if [patient_gender] = &quot;M&quot; then   [patient_id]&#13;&#10;END)' />
+      </column>
+      <column aggregation='Sum' caption='Hours' datatype='integer' name='[Calculation_489766500572700675]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEPART(&apos;hour&apos;,[date])' />
+      </column>
+      <column caption='Weekday' datatype='string' name='[Calculation_489766500573216773]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;, [date])' />
+      </column>
+      <column caption='Max no of patients' datatype='integer' name='[Calculation_489766500574547974]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF COUNTD([patient_id])= WINDOW_MAX(COUNTD([patient_id])) THEN COUNTD([patient_id])&#13;&#10;else NULL &#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='index' datatype='integer' name='[Calculation_948570716844716032]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='fixed 1' datatype='integer' name='[Calculation_948570716845420546]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED DATETRUNC(&apos;month&apos;,[date]) : [Calculation_489766500571541504]}' />
+      </column>
+      <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot;None&quot;'>
+            <value>&quot;None&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='F Patients' datatype='integer' name='[M Patients (copy)_489766500572565506]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='countd(if [patient_gender] = &quot;F&quot; then   [patient_id]&#13;&#10;END)' />
+      </column>
+      <column caption='Min no of patients' datatype='integer' name='[Max|Min no of patients (copy)_489766500575055879]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF   COUNTD([patient_id])= WINDOW_MIN(COUNTD([patient_id])) THEN COUNTD([patient_id])&#13;&#10;else NULL &#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Measure Values' datatype='real' name='[Multiple Values]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='Patient Age (bin)' datatype='integer' name='[Patient Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[patient_age]' peg='0' size='5' />
+        <aliases>
+          <alias key='0' value='0-4' />
+          <alias key='1' value='5-9' />
+          <alias key='2' value='10-14' />
+          <alias key='3' value='15-19' />
+          <alias key='4' value='20-24' />
+          <alias key='5' value='25-29' />
+          <alias key='6' value='30-34' />
+          <alias key='7' value='35-39' />
+          <alias key='8' value='40-44' />
+          <alias key='9' value='45-49' />
+          <alias key='10' value='50-54' />
+          <alias key='11' value='55-59' />
+          <alias key='12' value='60-64' />
+          <alias key='13' value='65-69' />
+          <alias key='14' value='70-74' />
+          <alias key='15' value='+75' />
+        </aliases>
+      </column>
+      <column aggregation='None' caption='Patient Waittime (bin)' datatype='integer' name='[Patient Waittime (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[patient_waittime]' peg='0' size='10' />
+      </column>
+      <column caption='Tooltip' datatype='string' name='[UPPER Month (copy)_766456384358629382]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATENAME(&apos;month&apos;, [date]) &#13;&#10;+ &apos; &apos; + DATENAME(&apos;day&apos;, [date]) &#13;&#10;+ &apos;, &apos; + DATENAME(&apos;year&apos;, [date])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Query Results' datatype='table' name='[__tableau_internal_object_id__].[QueryTable_BFD376F0A40B42C389286551169994BC]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+      <column caption='fixed 1 (copy)' datatype='integer' name='[fixed 1 (copy)_948570716846182403]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED : [Calculation_489766500571541504]}' />
+      </column>
+      <column caption='Patient Admin Flag' datatype='boolean' hidden='true' name='[patient_admin_flag]' role='dimension' type='nominal' />
+      <column caption='Patient Age' datatype='integer' name='[patient_age]' role='measure' type='quantitative' />
+      <column caption='Patient First Inital' datatype='string' hidden='true' name='[patient_first_inital]' role='dimension' type='nominal' />
+      <column caption='Patient Gender' datatype='string' name='[patient_gender]' role='dimension' type='nominal' />
+      <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+      <column caption='Patient Last Name' datatype='string' hidden='true' name='[patient_last_name]' role='dimension' type='nominal' />
+      <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+      <column caption='Patient Sat Score' datatype='integer' name='[patient_sat_score]' role='measure' type='quantitative' />
+      <column caption='Patient Waittime' datatype='integer' name='[patient_waittime]' role='measure' type='quantitative' />
+      <column-instance column='[patient_sat_score]' derivation='Avg' name='[avg:patient_sat_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[pcto:usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Columns' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[patient_sat_score]' derivation='Sum' name='[sum:patient_sat_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_489766500574547974]' derivation='User' name='[usr:Calculation_489766500574547974:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[M Patients (copy)_489766500572565506]' derivation='User' name='[usr:M Patients (copy)_489766500572565506:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Max|Min no of patients (copy)_489766500575055879]' derivation='User' name='[usr:Max|Min no of patients (copy)_489766500575055879:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <group caption='Action (Department Referral (group),Department Referral)' hidden='true' name='[Action (Department Referral (group),Department Referral)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Department Referral (group)]' />
+          <groupfilter function='level-members' level='[department_referral]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Patient Race)' hidden='true' name='[Action (Patient Race)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[patient_race]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (Patient Age (bin))' hidden='true' name='[Tooltip (Patient Age (bin))]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Patient Age (bin)]' />
+        </groupfilter>
+      </group>
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Dates' role='dimensions'>
+        <folder-item name='[Calculation_489766500572700675]' type='field' />
+        <folder-item name='[Calculation_489766500573216773]' type='field' />
+        <folder-item name='[UPPER Month (copy)_766456384358629382]' type='field' />
+        <folder-item name='[date]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Patient' role='measures'>
+        <folder-item name='[Calculation_489766500571541504]' type='field' />
+        <folder-item name='[Calculation_489766500572090369]' type='field' />
+        <folder-item name='[Calculation_489766500574547974]' type='field' />
+        <folder-item name='[M Patients (copy)_489766500572565506]' type='field' />
+        <folder-item name='[Max|Min no of patients (copy)_489766500575055879]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.true...folders-common>
+        <folder name='Dates'>
+          <folder-item name='[Calculation_489766500572700675]' type='field' />
+          <folder-item name='[Calculation_489766500573216773]' type='field' />
+          <folder-item name='[UPPER Month (copy)_766456384358629382]' type='field' />
+          <folder-item name='[date]' type='field' />
+        </folder>
+        <folder name='Patient'>
+          <folder-item name='[Calculation_489766500571541504]' type='field' />
+          <folder-item name='[Calculation_489766500572090369]' type='field' />
+          <folder-item name='[Calculation_489766500574547974]' type='field' />
+          <folder-item name='[M Patients (copy)_489766500572565506]' type='field' />
+          <folder-item name='[Max|Min no of patients (copy)_489766500575055879]' type='field' />
+        </folder>
+      </_.fcp.SchemaViewerObjectModel.true...folders-common>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Datasources/federated.0lh815g0j3lcz411ft8ly0yb6vjy_0g1dw4y0bjr3901auqn1c0wsedx6.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/20/2021 04:12:45 PM' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Hosibtals' increment-value='%null%' refresh-type='create' rows-inserted='9216' timestamp-start='2021-11-20 16:12:40.141' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Query Results</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>9216</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9216</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_gender</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[patient_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_age</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_sat_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[patient_sat_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_sat_score</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_race</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_race]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_race</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_waittime</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[patient_waittime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_waittime</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>department_referral</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[department_referral]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>department_referral</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_BFD376F0A40B42C389286551169994BC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='false' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Department Referral (group)]' type='palette'>
+            <map to='#538e82'>
+              <bucket>&quot;None&quot;</bucket>
+            </map>
+            <map to='#ffffff'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#538e82'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500574547974:qk]&quot;</bucket>
+            </map>
+            <map to='#88e8d3'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Max|Min no of patients (copy)_489766500575055879:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[avg:patient_sat_score:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[pcto:usr:Calculation_489766500571541504:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[sum:patient_sat_score:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[sum:Calculation_1064538403019927553:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:M Patients (copy)_489766500572565506:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Egypt&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='Calculation_489766500572700675' />
+        <field-sort-custom-order field='patient_id' />
+        <field-sort-custom-order field='patient_gender' />
+        <field-sort-custom-order field='patient_age' />
+        <field-sort-custom-order field='patient_sat_score' />
+        <field-sort-custom-order field='patient_first_inital' />
+        <field-sort-custom-order field='patient_last_name' />
+        <field-sort-custom-order field='patient_race' />
+        <field-sort-custom-order field='patient_admin_flag' />
+        <field-sort-custom-order field='patient_waittime' />
+        <field-sort-custom-order field='department_referral' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Query Results' id='QueryTable_BFD376F0A40B42C389286551169994BC'>
+            <properties context=''>
+              <relation connection='webdata-direct.01seqhb0ajw8tp1fzo1se18fpgfy' name='Query Results' table='[QueryTable]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_A4AC559C244C43B5A10677A6B927443D]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='#RWFD Hospitals Emrgency room' type='sheet' worksheet='Dept Referral' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='#RWFD Hospitals Emrgency room' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='#RWFD Hospitals Emrgency room' type='sheet' worksheet='Patient Race' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='#RWFD Hospitals Emrgency room' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Avg waiting time in Mins'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column-instance column='[patient_waittime]' derivation='Avg' name='[avg:patient_waittime:qk]' pivot='key' type='quantitative' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column caption='Patient Waittime' datatype='integer' name='[patient_waittime]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[avg:patient_waittime:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='12'>Avg waiting time</run>
+                <run fontsize='14'>Æ </run>
+                <run>in (Mins)&#10;</run>
+                <run bold='true' fontcolor='#538e82' fontsize='18'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[avg:patient_waittime:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{55C7A684-849C-4107-BFA2-60DE7C9819DD}' />
+    </worksheet>
+    <worksheet name='Dept Referral'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[department_referral]' derivation='None' name='[none:department_referral:nk]' pivot='key' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[pcto:usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:department_referral:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;General Practice&quot;</bucket>
+              <bucket>&quot;Orthopedics&quot;</bucket>
+              <bucket>&quot;Cardiology&quot;</bucket>
+              <bucket>&quot;Physiotherapy&quot;</bucket>
+              <bucket>&quot;Gastroenterology&quot;</bucket>
+              <bucket>&quot;Neurology&quot;</bucket>
+              <bucket>&quot;Renal&quot;</bucket>
+              <bucket>&quot;None&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[pcto:usr:Calculation_489766500571541504:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[pcto:usr:Calculation_489766500571541504:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#ff0054' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#538e82' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[pcto:usr:Calculation_489766500571541504:qk]' />
+              <color column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Department Referral (group)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Department Referral:&#9;</run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:department_referral:nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[pcto:usr:Calculation_489766500571541504:qk]> | <[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#538e82' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:department_referral:nk]</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[pcto:usr:Calculation_489766500571541504:qk]</cols>
+        <show-full-range>
+          <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Patient Waittime (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{2E0BFCFA-4923-4FBC-B4B1-15A79C69C8EE}' />
+    </worksheet>
+    <worksheet name='Hours header'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column aggregation='Sum' caption='Hours' datatype='integer' name='[Calculation_489766500572700675]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEPART(&apos;hour&apos;,[date])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500572700675]' derivation='None' name='[none:Calculation_489766500572700675:ok]' pivot='key' type='ordinal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='border-color' value='#b0b0b0' />
+            <format attr='border-width' value='1' />
+            <format attr='hnaxis' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]' value='false' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-size' value='8' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='7'>&lt;</run>
+                <run fontsize='7'>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]</run>
+                <run fontsize='7'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#cfd8dc' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{B3B295E8-3F80-4F93-B6C2-CB77B744EB4F}' />
+    </worksheet>
+    <worksheet name='Hours|Seasonality'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column aggregation='Sum' caption='Hours' datatype='integer' name='[Calculation_489766500572700675]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEPART(&apos;hour&apos;,[date])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500572700675]' derivation='None' name='[none:Calculation_489766500572700675:ok]' pivot='key' type='ordinal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' scope='rows' value='false' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#dde7e5</color>
+                <color>#caddd9</color>
+                <color>#b8d3cd</color>
+                <color>#a7c9c2</color>
+                <color>#97bfb7</color>
+                <color>#88b5ac</color>
+                <color>#79aba1</color>
+                <color>#6ca196</color>
+                <color>#5f978c</color>
+                <color>#538e82</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#898989'><![CDATA[Hour of the day: <[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#898989'>Patient</run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[ <[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#898989' />
+                <format attr='size' value='0.96651935577392578' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]</cols>
+      </table>
+      <simple-id uuid='{8E53DF06-C9E9-462F-9FE2-A393A79D6649}' />
+    </worksheet>
+    <worksheet name='No of  Patients'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column caption='M Patients' datatype='integer' name='[Calculation_489766500572090369]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd(if [patient_gender] = &quot;M&quot; then   [patient_id]&#13;&#10;END)' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='F Patients' datatype='integer' name='[M Patients (copy)_489766500572565506]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd(if [patient_gender] = &quot;F&quot; then   [patient_id]&#13;&#10;END)' />
+            </column>
+            <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='MY' name='[my:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Patient Gender' datatype='string' name='[patient_gender]' role='dimension' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_489766500572090369]' derivation='User' name='[usr:Calculation_489766500572090369:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[M Patients (copy)_489766500572565506]' derivation='User' name='[usr:M Patients (copy)_489766500572565506:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[my:date:ok]'>
+            <groupfilter function='member' level='[my:date:ok]' member='202002' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[my:date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[my:date:ok]' value='Choose Month'>
+              <formatted-text>
+                <run fontcolor='#898989' fontname='Tahoma'>Choose Month</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:M Patients (copy)_489766500572565506:qk]' />
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500572090369:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#898989' fontsize='12'>F</run>
+                <run bold='true' fontcolor='#538e82' fontsize='16'>Æ </run>
+                <run bold='true' fontcolor='#538e82' fontsize='14'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:M Patients (copy)_489766500572565506:qk]>]]></run>
+                <run bold='true' fontcolor='#898989' fontsize='16'>|</run>
+                <run bold='true' fontcolor='#538e82' fontsize='16'>Æ </run>
+                <run fontcolor='#898989' fontsize='12'>M</run>
+                <run bold='true' fontcolor='#538e82' fontsize='16'>Æ </run>
+                <run bold='true' fontcolor='#538e82' fontsize='14'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500572090369:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#898989' fontsize='12'>Total Patients</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#538e82' fontsize='18'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{04DED748-BF0A-408F-98F6-BE758F35DD70}' />
+    </worksheet>
+    <worksheet name='Patient Race'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[patient_race]' derivation='None' name='[none:patient_race:nk]' pivot='key' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:patient_race:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#ff0054' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#538e82' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:patient_race:nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#898989'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#538e82' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#538e82' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:patient_race:nk]</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]</cols>
+      </table>
+      <simple-id uuid='{E18DB01F-21C7-45A2-AE26-1A6ABAE20241}' />
+    </worksheet>
+    <worksheet name='Patients Trendline'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column caption='Max no of patients' datatype='integer' name='[Calculation_489766500574547974]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF COUNTD([patient_id])= WINDOW_MAX(COUNTD([patient_id])) THEN COUNTD([patient_id])&#13;&#10;else NULL &#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Min no of patients' datatype='integer' name='[Max|Min no of patients (copy)_489766500575055879]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF   COUNTD([patient_id])= WINDOW_MIN(COUNTD([patient_id])) THEN COUNTD([patient_id])&#13;&#10;else NULL &#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Tooltip' datatype='string' name='[UPPER Month (copy)_766456384358629382]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;month&apos;, [date]) &#13;&#10;+ &apos; &apos; + DATENAME(&apos;day&apos;, [date]) &#13;&#10;+ &apos;, &apos; + DATENAME(&apos;year&apos;, [date])' />
+            </column>
+            <column-instance column='[UPPER Month (copy)_766456384358629382]' derivation='Attribute' name='[attr:UPPER Month (copy)_766456384358629382:nk]' pivot='key' type='nominal' />
+            <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_489766500574547974]' derivation='User' name='[usr:Calculation_489766500574547974:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Max|Min no of patients (copy)_489766500575055879]' derivation='User' name='[usr:Max|Min no of patients (copy)_489766500575055879:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500574547974:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Max|Min no of patients (copy)_489766500575055879:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[:Measure Names]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[tdy:date:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Multiple Values]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Multiple Values]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' scope='rows' value='false' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='div-level' scope='rows' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Max|Min no of patients (copy)_489766500575055879:qk]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[attr:UPPER Month (copy)_766456384358629382:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#208591' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[attr:UPPER Month (copy)_766456384358629382:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#898989'>Patient Visits |</run>
+                <run bold='true' fontcolor='#898989' fontsize='12'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[:Measure Names]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Max|Min no of patients (copy)_489766500575055879:qk]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[attr:UPPER Month (copy)_766456384358629382:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#208591' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[attr:UPPER Month (copy)_766456384358629382:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#898989'>Patient Visits |</run>
+                <run bold='true' fontcolor='#898989' fontsize='12'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1974033117294312' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Max|Min no of patients (copy)_489766500575055879:qk]' />
+              <tooltip column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[attr:UPPER Month (copy)_766456384358629382:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#208591' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[attr:UPPER Month (copy)_766456384358629382:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#898989'>Patient Visits |</run>
+                <run bold='true' fontcolor='#898989' fontsize='12'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>([federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk] + [federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Multiple Values])</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[tdy:date:qk]</cols>
+        <show-full-range>
+          <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Patient Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{CD05BD31-411D-4710-8EEC-C540484C6652}' />
+    </worksheet>
+    <worksheet name='Patients age group'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column aggregation='None' caption='Patient Age (bin)' datatype='integer' name='[Patient Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[patient_age]' peg='0' size='5' />
+              <aliases>
+                <alias key='0' value='0-4' />
+                <alias key='1' value='5-9' />
+                <alias key='2' value='10-14' />
+                <alias key='3' value='15-19' />
+                <alias key='4' value='20-24' />
+                <alias key='5' value='25-29' />
+                <alias key='6' value='30-34' />
+                <alias key='7' value='35-39' />
+                <alias key='8' value='40-44' />
+                <alias key='9' value='45-49' />
+                <alias key='10' value='50-54' />
+                <alias key='11' value='55-59' />
+                <alias key='12' value='60-64' />
+                <alias key='13' value='65-69' />
+                <alias key='14' value='70-74' />
+                <alias key='15' value='+75' />
+              </aliases>
+            </column>
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[Patient Age (bin)]' derivation='None' name='[none:Patient Age (bin):ok]' pivot='key' type='ordinal' />
+            <column caption='Patient Age' datatype='integer' name='[patient_age]' role='measure' type='quantitative' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' scope='rows' value='false' />
+            <format attr='height' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Patient Age (bin):ok]' value='54' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-color' value='#538e82' />
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='rows' value='2' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Patient Age group:&#9;</run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Patient Age (bin):ok]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Patients:&#9;</run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.0324862003326416' />
+                <format attr='mark-color' value='#538e82' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#538e82' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Patient Age (bin):ok]</cols>
+      </table>
+      <simple-id uuid='{4A1A57C6-F312-4629-91EB-0F48DC9EAFF3}' />
+    </worksheet>
+    <worksheet name='Satisfaction'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column-instance column='[patient_sat_score]' derivation='Avg' name='[avg:patient_sat_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column caption='Patient Sat Score' datatype='integer' name='[patient_sat_score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[avg:patient_sat_score:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[avg:patient_sat_score:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='12'>Satisfaction Score</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#538e82' fontsize='18'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[avg:patient_sat_score:qk]>]]></run>
+                <run fontcolor='#538e82' fontsize='18'>Æ </run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{B1E2D2AB-9661-4CF3-949B-D64EFD0C059C}' />
+    </worksheet>
+    <worksheet name='Seasonality'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='avg(0)' datatype='real' name='[Calculation_1064538403025924101]' role='measure' type='quantitative' user:unnamed='Sheet 8'>
+              <calculation class='tableau' formula='avg(0)' />
+            </column>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column aggregation='Sum' caption='Hours' datatype='integer' name='[Calculation_489766500572700675]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEPART(&apos;hour&apos;,[date])' />
+            </column>
+            <column caption='Weekday' datatype='string' name='[Calculation_489766500573216773]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;, [date])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500572700675]' derivation='None' name='[none:Calculation_489766500572700675:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_489766500573216773]' derivation='None' name='[none:Calculation_489766500573216773:nk]' pivot='key' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1064538403025924101]' derivation='User' name='[usr:Calculation_1064538403025924101:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='border-color' value='#b0b0b0' />
+            <format attr='border-width' value='1' />
+            <format attr='hnlabel' value='vertical' />
+            <format attr='hnaxis' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]' value='80' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]' value='false' />
+            <format attr='font-size' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]' value='8' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#dde7e5</color>
+                <color>#caddd9</color>
+                <color>#b8d3cd</color>
+                <color>#a7c9c2</color>
+                <color>#97bfb7</color>
+                <color>#88b5ac</color>
+                <color>#79aba1</color>
+                <color>#6ca196</color>
+                <color>#5f978c</color>
+                <color>#538e82</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+              <size column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_1064538403025924101:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Hour of the day: </run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]>]]></run>
+                <run bold='true' fontalignment='1'>, </run>
+                <run fontalignment='1' fontcolor='#787878'>of Weekday: </run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Patients:</run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8350828886032104' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#898989' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500572700675:ok]</cols>
+      </table>
+      <simple-id uuid='{6E85FFC4-2558-4099-A1AA-C14452F31C3D}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='index' datatype='integer' name='[Calculation_948570716844716032]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Calculation_948570716844716032]' derivation='User' name='[usr:Calculation_948570716844716032:ok]' pivot='key' type='ordinal'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_948570716844716032:ok]</cols>
+      </table>
+      <simple-id uuid='{7FEB60F0-0BAB-44DA-834F-1B570EBD7AF2}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='M Patients' datatype='integer' name='[Calculation_489766500572090369]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd(if [patient_gender] = &quot;M&quot; then   [patient_id]&#13;&#10;END)' />
+            </column>
+            <column caption='F Patients' datatype='integer' name='[M Patients (copy)_489766500572565506]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='countd(if [patient_gender] = &quot;F&quot; then   [patient_id]&#13;&#10;END)' />
+            </column>
+            <column caption='Patient Gender' datatype='string' name='[patient_gender]' role='dimension' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500572090369]' derivation='User' name='[usr:Calculation_489766500572090369:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[M Patients (copy)_489766500572565506]' derivation='User' name='[usr:M Patients (copy)_489766500572565506:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500572090369:qk]' />
+              <text column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:M Patients (copy)_489766500572565506:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8DC18432-08DA-4190-9DF3-9C520F52E69D}' />
+    </worksheet>
+    <worksheet name='Weekday|Seasonality'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+            <column caption='No. of Patients' datatype='integer' name='[Calculation_489766500571541504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([patient_id])' />
+            </column>
+            <column caption='Weekday' datatype='string' name='[Calculation_489766500573216773]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;, [date])' />
+            </column>
+            <column datatype='string' name='[Department Referral (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[department_referral]' default='&quot;Other&quot;' new-bin='true'>
+                <bin default-name='true' value='&quot;None&quot;'>
+                  <value>&quot;None&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500573216773]' derivation='None' name='[none:Calculation_489766500573216773:nk]' pivot='key' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_489766500571541504]' derivation='User' name='[usr:Calculation_489766500571541504:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_A4AC559C244C43B5A10677A6B927443D]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Department Referral (group)]' />
+              <groupfilter function='level-members' level='[department_referral]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]'>
+            <groupfilter function='level-members' level='[patient_race]' user:ui-action-filter='[Action2_7C16FDDCF6DD44568460B7AEBDB614E6]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Department Referral (group),Department Referral)]</column>
+            <column>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Action (Patient Race)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' scope='cols' value='false' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#dde7e5</color>
+                <color>#caddd9</color>
+                <color>#b8d3cd</color>
+                <color>#a7c9c2</color>
+                <color>#97bfb7</color>
+                <color>#88b5ac</color>
+                <color>#79aba1</color>
+                <color>#6ca196</color>
+                <color>#5f978c</color>
+                <color>#538e82</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Weekday: </run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Patients:</run>
+                <run bold='true' fontalignment='1' fontcolor='#538e82'><![CDATA[<[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#898989' />
+                <format attr='size' value='0.98850828409194946' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[none:Calculation_489766500573216773:nk]</rows>
+        <cols>[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]</cols>
+      </table>
+      <simple-id uuid='{6AB3372F-BD33-4775-AC3E-CCC24AA29CB7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='#RWFD Hospitals Emrgency room'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/RWFDHospitalEmregencyroomvisits/RWFDHospitalsEmrgencyroom?rev=' id='51982090' path='/workbooks/RWFDHospitalEmregencyroomvisits' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1500' minheight='900' minwidth='1500' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Hosibtals' name='federated.0lh815g0j3lcz411ft8ly0yb6vjy' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0lh815g0j3lcz411ft8ly0yb6vjy'>
+        <column caption='Date' datatype='datetime' datatype-customized='true' name='[date]' role='dimension' type='ordinal' />
+        <column-instance column='[date]' derivation='MY' name='[my:date:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='18' param='horz' type-v2='layout-flow' w='98934' x='533' y='889'>
+            <zone h='98222' id='9' type-v2='layout-basic' w='98934' x='533' y='889'>
+              <zone forceUpdate='true' h='98222' id='5' is-scaled='1' param='Image/#RWFD (1).png' type-v2='bitmap' w='98934' x='533' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='49778' id='15' param='vert' type-v2='layout-flow' w='58200' x='8733' y='46444'>
+          <zone fixed-size='143' h='15889' id='62' is-fixed='true' type-v2='layout-basic' w='58200' x='8733' y='46444'>
+            <zone h='15889' id='28' param='horz' type-v2='layout-flow' w='43503' x='8733' y='46444'>
+              <zone fixed-size='74' h='15889' id='30' is-fixed='true' type-v2='empty' w='5466' x='8733' y='46444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='15889' id='29' name='Hours|Seasonality' show-title='false' w='38016' x='14199' y='46444'>
+                <layout-cache cell-count-w='24' minheight='100' type-h='scalable' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='15889' id='63' param='horz' type-v2='layout-flow' w='14697' x='52236' y='46444'>
+              <zone fixed-size='177' h='15889' id='31' is-fixed='true' type-v2='empty' w='14697' x='52236' y='46444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='33889' id='64' is-fixed='true' type-v2='layout-basic' w='58200' x='8733' y='62333'>
+            <zone h='33889' id='22' param='horz' type-v2='layout-flow' w='43467' x='8733' y='62333'>
+              <zone fixed-size='592' h='33889' id='25' is-fixed='true' param='vert' type-v2='layout-flow' w='43467' x='8733' y='62333'>
+                <zone fixed-size='260' h='29778' id='16' is-fixed='true' name='Seasonality' show-title='false' w='43467' x='8733' y='62333'>
+                  <layout-cache cell-count-w='24' non-cell-size-w='80' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='4111' id='26' param='horz' type-v2='layout-flow' w='43467' x='8733' y='92111'>
+                  <zone fixed-size='67' h='4111' id='27' is-fixed='true' type-v2='empty' w='5000' x='8733' y='92111'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4111' id='24' name='Hours header' show-title='false' w='38448' x='13733' y='92111'>
+                    <layout-cache cell-count-w='24' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+            <zone h='33889' id='65' param='horz' type-v2='layout-flow' w='14733' x='52200' y='62333'>
+              <zone h='33889' id='60' is-fixed='true' type-v2='layout-basic' w='14733' x='52200' y='62333'>
+                <zone h='29778' id='32' param='vert' type-v2='layout-flow' w='14733' x='52200' y='62333'>
+                  <zone h='29778' id='23' name='Weekday|Seasonality' show-title='false' w='14733' x='52200' y='62333'>
+                    <layout-cache cell-count-h='7' minwidth='100' type-h='cell' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='4111' id='61' param='vert' type-v2='layout-flow' w='14733' x='52200' y='92111'>
+                  <zone fixed-size='24' h='3556' id='33' is-fixed='true' type-v2='empty' w='14733' x='52200' y='92111'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='5889' id='35' mode='dropdown' name='No of  Patients' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[my:date:ok]' type-v2='filter' w='10000' x='85500' y='3333' />
+        <zone h='11556' id='38' param='horz' type-v2='layout-flow' w='51214' x='14071' y='12111'>
+          <zone fixed-size='269' h='11556' id='39' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='17933' x='14071' y='12111'>
+            <zone fixed-size='189' h='11556' id='34' is-fixed='true' name='No of  Patients' show-title='false' w='17933' x='14067' y='12111'>
+              <layout-cache type-h='cell' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='11556' id='37' name='Patients Trendline' show-title='false' w='33281' x='32004' y='12111'>
+            <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='9444' id='40' name='Avg waiting time in Mins' show-title='false' w='19929' x='15000' y='28222' />
+        <zone h='9444' id='41' name='Satisfaction' show-title='false' w='19933' x='45200' y='28222' />
+        <zone forceUpdate='true' h='4000' id='42' type-v2='text' w='35133' x='9000' y='41889'>
+          <formatted-text>
+            <run fontsize='18'>Patients visits by Day and Time</run>
+          </formatted-text>
+        </zone>
+        <zone h='21667' id='43' name='Dept Referral' w='26375' x='69625' y='71111' />
+        <zone h='22111' id='44' name='Patient Race' w='26750' x='69250' y='43556' />
+        <zone h='21111' id='45' name='Patients age group' w='26563' x='69188' y='17000' />
+        <zone forceUpdate='true' h='5000' id='54' type-v2='text' w='47400' x='1533' y='3222'>
+          <formatted-text>
+            <run fontcolor='#898989' fontname='Tahoma' fontsize='20'>#RWFD Healthcare Emergency Room Visits</run>
+          </formatted-text>
+        </zone>
+        <zone h='5556' id='66' type-v2='dashboard-object' w='3333' x='2000' y='73556'>
+          <button _.fcp.DashboardExportButton.true...button-click-action-metadata='pdf' action=''>
+            <_.fcp.DashboardExportButton.true...export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{00CE01BF-8944-4B0E-9469-C7DC0D4C85C0}&quot;</_.fcp.DashboardExportButton.true...export-button-action>
+            <button-visual-state>
+              <image-path>Image/pdf.png</image-path>
+              <tooltip-text>Download PDF</tooltip-text>
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone alt-text='Author Linkedin' h='5556' id='67' is-scaled='1' param='Image/linkedin.png' type-v2='bitmap' url='https://www.linkedin.com/in/abdelaziz-mahjoub/' w='3333' x='2000' y='86000' />
+        <zone alt-text='Author Twitter' h='5556' id='68' is-scaled='1' param='Image/twitter.png' type-v2='bitmap' url='https://twitter.com/abdelazizmahjo4' w='3333' x='2000' y='91889' />
+        <zone forceUpdate='true' h='1778' id='69' type-v2='text' w='24667' x='73867' y='97222'>
+          <formatted-text>
+            <run fontcolor='#538e82' fontname='Arial'>Data Source: #RWFD | Design: Abdelaziz Mahjoub</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{00CE01BF-8944-4B0E-9469-C7DC0D4C85C0}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='#RWFD Hospitals Emrgency room'>
+      <viewpoints>
+        <viewpoint name='Avg waiting time in Mins'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Dept Referral'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hours header'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hours|Seasonality'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='No of  Patients'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Patient Race'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Patients Trendline'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Patients age group'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Satisfaction'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Seasonality'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Weekday|Seasonality'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='37' />
+      <simple-id uuid='{535EA2EC-5DCF-4DD3-BFF4-8036AA8BB2DC}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{6D2F874F-E0EB-4809-BBB4-4DA3DCC5D433}' />
+    </window>
+    <window class='worksheet' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='208'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C1F82153-035C-4CB7-9336-13B2C711D695}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Avg waiting time in Mins'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6038E777-0A1D-4971-AEF4-75B4135633AD}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Dept Referral'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[Department Referral (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{13DFEDD7-1E3B-4288-852E-C61219ED4CCC}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Hours header'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{43CC0E0A-574D-49C9-AE87-898438EF3BF7}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Hours|Seasonality'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{574C9715-0F79-43F5-85F6-C752FA9ECD4C}' />
+    </window>
+    <window class='worksheet' hidden='true' name='No of  Patients'>
+      <cards>
+        <edge name='left'>
+          <strip size='266'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[my:date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{DF46F4C0-AF24-4E24-85F3-2365F9192D7C}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Patient Race'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{384AE772-E9ED-4D05-862B-0AA44F1BB0E5}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Patients Trendline'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1B957802-0E0C-4845-82D4-CAFEF7FCB519}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Patients age group'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9AFB1057-9D26-42A3-AB90-332E1AE645A2}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Satisfaction'>
+      <cards>
+        <edge name='left'>
+          <strip size='271'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4C88A53C-B494-4682-8018-14CA57765C59}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Seasonality'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_1064538403025924101:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A4BAB0B1-2701-4CDC-B296-B209916D9667}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Weekday|Seasonality'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lh815g0j3lcz411ft8ly0yb6vjy].[usr:Calculation_489766500571541504:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B19530B3-7042-4D40-9C47-FC2B4B5FBD49}' />
+    </window>
+  </windows>
+</workbook>
