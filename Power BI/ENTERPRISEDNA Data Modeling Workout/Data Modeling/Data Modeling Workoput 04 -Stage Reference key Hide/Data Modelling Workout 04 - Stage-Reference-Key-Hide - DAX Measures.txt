@@ -1,0 +1,137 @@
+Data Modelling Workout 04 - Stage-Reference-Key-Hide - DAX Measures
+===================================================================
+
+Total Sales = 
+SUMX( 
+    Sales, 
+    Sales[Quantity] * Sales[Unit Price] 
+)
+
+Total Costs = 
+SUMX( 
+    Sales, 
+    Sales[Quantity] * Sales[Unit Cost] 
+)
+
+Canada Sales = 
+CALCULATE( 
+    [Total Sales], 
+    FILTER( Regions, Regions[Country] = "Canada" ) 
+) + 0
+
+US Sales = 
+CALCULATE( 
+    [Total Sales], 
+    FILTER( Regions, Regions[Country] = "United States" ) 
+) + 0
+
+Previous Year Sales = 
+VAR _YearOffset =
+    SELECTEDVALUE( Dates[CurrYearOffset] ) - 1
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrYearOffset] = _YearOffset )
+    ) + 0
+RETURN
+    _Result
+
+Current Year Sales =
+ VAR _YearOffset =
+    SELECTEDVALUE( Dates[CurrYearOffset] )
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrYearOffset] = _YearOffset )
+    ) + 0
+RETURN
+    _Result
+	
+Blue Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Sales ), Sales[Colour] = "Blue" )
+) + 0
+
+2010 Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2010 )
+) + 0
+
+2011 Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2011 )
+) + 0
+
+2012 Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2012 )
+) + 0
+
+Red Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Sales ), Sales[Colour] = "Red" )
+) + 0
+
+Weekday Sales = 
+CALCULATE( 
+    [Total Sales], 
+    FILTER( Dates, Dates[Day Type] = "Weekday" ) 
+) + 0
+
+Weekend Sales = 
+CALCULATE( 
+    [Total Sales], 
+    FILTER( Dates, Dates[Day Type] = "Weekend" ) 
+) + 0
+
+Current Quarter Sales = 
+VAR _QuarterOffset =
+    SELECTEDVALUE( Dates[CurrQuarterOffset] )
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrQuarterOffset] = _QuarterOffset )
+    )
+RETURN
+    _Result
+	
+Previous Quarter Sales = VAR _QuarterOffset =
+    SELECTEDVALUE( Dates[CurrQuarterOffset] ) - 1
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrQuarterOffset] = _QuarterOffset )
+    )
+RETURN
+    _Result
+	
+2013 Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2013 )
+) + 0
+
+2014 Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2014 )
+) + 0
+
+2015 Sales = 
+CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2015 )
+) + 0
