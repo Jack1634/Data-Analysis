@@ -1,0 +1,103 @@
+Total Sales = SUMX( 
+    Sales, 
+    Sales[Quantity] * Sales[Unit Price] 
+) + 0
+
+Total Costs = SUMX( 
+    Sales, 
+    Sales[Quantity] * Sales[Unit Cost] 
+) + 0
+
+Canada Sales = CALCULATE( 
+    [Total Sales], 
+    FILTER( Sales, Sales[Country] = "Canada" ) 
+) + 0
+
+US Sales = CALCULATE( 
+    [Total Sales], 
+    FILTER( Sales, Sales[Country] = "United States" ) 
+) + 0
+
+Current Year Sales = 
+VAR _YearOffset =
+    SELECTEDVALUE( Dates[CurrYearOffset] )
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrYearOffset] = _YearOffset )
+    ) + 0
+RETURN
+    _Result
+
+Previous Year Sales = 
+VAR _YearOffset =
+    SELECTEDVALUE( Dates[CurrYearOffset] ) - 1
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrYearOffset] = _YearOffset )
+    ) + 0
+RETURN
+    _Result
+
+Current Quarter Sales = 
+VAR _QuarterOffset =
+    SELECTEDVALUE( Dates[CurrQuarterOffset] )
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrQuarterOffset] = _QuarterOffset )
+    ) + 0
+RETURN
+    _Result
+	
+Previous Quarter Sales = 
+VAR _QuarterOffset =
+    SELECTEDVALUE( Dates[CurrQuarterOffset] ) - 1
+VAR _Result =
+    CALCULATE(
+        [Total Sales],
+        FILTER( ALL( Dates ), Dates[CurrQuarterOffset] = _QuarterOffset )
+    ) + 0
+RETURN
+    _Result
+
+Blue Sales = CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Sales ), Sales[Colour] = "Blue" )
+) + 0
+
+Red Sales = CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Sales ), Sales[Colour] = "Red" )
+) + 0
+
+2007 Sales = CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2007 )
+) + 0
+
+2008 Sales = CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2008 )
+) + 0
+
+2009 Sales = CALCULATE(
+    [Total Sales],
+    REMOVEFILTERS(),
+    FILTER( ALL( Dates ), Dates[Year] = 2009 )
+) + 0
+
+Weekday Sales = CALCULATE( 
+    [Total Sales], 
+    FILTER( Dates, Dates[Day Type] = "Weekday" ) 
+) + 0
+
+Weekend Sales = CALCULATE( 
+    [Total Sales], 
+    FILTER( Dates, Dates[Day Type] = "Weekend" ) 
+) + 0
